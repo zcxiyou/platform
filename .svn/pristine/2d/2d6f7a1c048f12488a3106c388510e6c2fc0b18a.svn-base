@@ -1,0 +1,76 @@
+server:
+  port: 9998
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: hx-gateway
+  profiles:
+#    active: @spring.profiles.active@
+     #active: test
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.189.69.32:8849
+    sentinel:
+#      transport:
+#        dashboard: localhost:8099
+    gateway:
+      discovery:
+        locator:
+          lower-case-service-id: true
+          enabled: true
+      routes:
+        - id: hx-system
+          uri: lb://hx-system
+          predicates:
+            - Path=/system/**
+        - id: hx-auth-server
+          uri: lb://hx-auth-server
+          predicates:
+            - Path=/oauth/**
+  sleuth:
+    sampler:
+      probability: 1.0
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 20000
+        readTimeout: 20000
+management:
+  endpoints:
+    web:
+      exposure:
+        include:  '*'
+    jmx:
+      enabled: false
+  metrics:
+    tags:
+      application: ${spring.application.name}
+tsf:
+  swagger:
+    enabled: false
+logging:
+  file: logs/hx-gateway.log
+  level:
+    root: INFO
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          semaphore:
+            maxConcurrentRequests: 1000
+          strategy: SEMAPHORE
+        timeout:
+          enabled: false
+      circuitBreaker:
+        enabled: false
+      fallback:
+        isolation:
+          semaphore:
+            maxConcurrentRequests: 1000
+        enabled: true

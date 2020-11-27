@@ -1,0 +1,51 @@
+2020-11-27 08:58:50.180  INFO 20372 --- [main] com.hx.gateway.HxGatewayApplication      : No active profile set, falling back to default profiles: default
+2020-11-27 08:58:51.133  INFO 20372 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fbf09c77-b111-3a1c-a552-12d6380e73e7
+2020-11-27 08:58:51.168  INFO 20372 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$88ba2339] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-27 08:58:54.327  INFO 20372 --- [main] com.hx.gateway.config.HxRestTemplate     : 请求的url路径为:http://hx-auth-server/oauth/token_key
+2020-11-27 08:58:54.329  INFO 20372 --- [main] com.hx.gateway.config.HxRestTemplate     : 调用微服务的名称:hx-auth-server
+2020-11-27 08:58:54.330  INFO 20372 --- [main] com.hx.gateway.config.HxRestTemplate     : 请求path:/oauth/token_key
+2020-11-27 08:58:56.017  INFO 20372 --- [main] com.hx.gateway.config.HxRestTemplate     : 随机选举的服务IP:http://192.168.56.1:9999
+2020-11-27 08:58:56.017  INFO 20372 --- [main] com.hx.gateway.config.HxRestTemplate     : 替换后的路径:http://192.168.56.1:9999/oauth/token_key
+2020-11-27 08:58:57.522  INFO 20372 --- [main] c.hx.gateway.filter.AuthorizationFilter  : 去认证服务器获取TokenKey:-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2v9XhRw1+WPriOSc3CdRI9lY7cQY4fZu6NgmCqROzl8ELo8NMcVRhh1p/FycQ/CJSXI9qN4mSkR5m87BxIgrzg0GOv7GnCKkMAQvV95jMKq1nmndcG1NTruAOr061gLV6dKmGDsq4jPEzIbZqp98aKxX1L8t7l7JUSXoUPfiCpEL6grNBYBcrblZWdpAruUaLamo51LaRxpPuGU1mfIA/TYZ5v0zm+j/gZmP1dvrgt0BIZtDejDUISl5yIeQYJMO675uY5uB/xHdkDT+f/4G8Dsw2Qnc3Bv3IcvUobc0fGHbJo6n0BeBbqsh/SF1XRpIJ2oEqj6MO6gJfgefOP2vWQIDAQAB
+-----END PUBLIC KEY-----
+2020-11-27 08:58:57.714  INFO 20372 --- [main] c.hx.gateway.filter.AuthorizationFilter  : 生成公钥:Sun RSA public key, 2048 bits
+  modulus: 27645864253960058162334632055081294557524543709653973777537227190089705763865987518003189941494832066564582087752996181929935732296483900683296241246074899824736709626256874577271173930711446820699380271161831117899318451668150011808366699252240158442509754285361380242055839305484259858331683506933702997111858435835692518462968652362440537565208186379603146602335418071178462841361716238904913686493773456295176751472765143722167328330889376148613168125349934635762633297246375373203209056245165237789671988511162870894884641899236295734783718021192533162429215851585269537390434348966989077205487087233041958809433
+  public exponent: 65537
+2020-11-27 08:58:57.738  WARN 20372 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-27 08:58:57.738  INFO 20372 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-27 08:58:57.746  WARN 20372 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-27 08:58:57.746  INFO 20372 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-27 08:58:59.611  INFO 20372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2020-11-27 08:58:59.612  INFO 20372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2020-11-27 08:58:59.613  INFO 20372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2020-11-27 08:58:59.613  INFO 20372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2020-11-27 08:58:59.613  INFO 20372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2020-11-27 08:58:59.613  INFO 20372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2020-11-27 08:58:59.614  INFO 20372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2020-11-27 08:58:59.614  INFO 20372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2020-11-27 08:58:59.614  INFO 20372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2020-11-27 08:58:59.614  INFO 20372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBodyPredicateFactory]
+2020-11-27 08:58:59.614  INFO 20372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2020-11-27 08:58:59.614  INFO 20372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2020-11-27 08:58:59.615  INFO 20372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2020-11-27 08:59:00.078  INFO 20372 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-11-27 08:59:01.946  INFO 20372 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port(s): 9998
+2020-11-27 08:59:01.971  INFO 20372 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, hx-gateway 192.168.56.1:9998 register finished
+2020-11-27 08:59:01.974  INFO 20372 --- [main] com.hx.gateway.HxGatewayApplication      : Started HxGatewayApplication in 16.682 seconds (JVM running for 17.733)
+2020-11-27 09:03:01.125  INFO 20372 --- [reactor-http-nio-2] c.hx.gateway.filter.AuthorizationFilter  : 网关认证开始URL->:/oauth/token_key
+2020-11-27 09:03:01.127  INFO 20372 --- [reactor-http-nio-2] c.hx.gateway.filter.AuthorizationFilter  : 无需认证的路径
+2020-11-27 09:03:02.578  INFO 20372 --- [reactor-http-nio-2] c.netflix.config.ChainedDynamicProperty  : Flipping property: hx-auth-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-11-27 09:03:02.642  INFO 20372 --- [reactor-http-nio-2] c.netflix.loadbalancer.BaseLoadBalancer  : Client: hx-auth-server instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=hx-auth-server,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2020-11-27 09:03:02.660  INFO 20372 --- [reactor-http-nio-2] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2020-11-27 09:03:02.698  INFO 20372 --- [reactor-http-nio-2] c.netflix.config.ChainedDynamicProperty  : Flipping property: hx-auth-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-11-27 09:03:02.702  INFO 20372 --- [reactor-http-nio-2] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client hx-auth-server initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=hx-auth-server,current list of Servers=[192.168.56.1:9999],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.56.1:9999;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@f7e69a2
+2020-11-27 09:03:03.669  INFO 20372 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: hx-auth-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-11-27 09:03:33.209  INFO 20372 --- [reactor-http-nio-7] c.hx.gateway.filter.AuthorizationFilter  : 网关认证开始URL->:/oauth/token
+2020-11-27 09:03:33.210  INFO 20372 --- [reactor-http-nio-7] c.hx.gateway.filter.AuthorizationFilter  : 无需认证的路径
+2020-11-27 09:03:46.049  INFO 20372 --- [reactor-http-nio-7] c.hx.gateway.filter.AuthorizationFilter  : 网关认证开始URL->:/oauth/token
+2020-11-27 09:03:46.049  INFO 20372 --- [reactor-http-nio-7] c.hx.gateway.filter.AuthorizationFilter  : 无需认证的路径
+2020-11-27 09:03:53.870  INFO 20372 --- [reactor-http-nio-7] c.hx.gateway.filter.AuthorizationFilter  : 网关认证开始URL->:/oauth/token
+2020-11-27 09:03:53.870  INFO 20372 --- [reactor-http-nio-7] c.hx.gateway.filter.AuthorizationFilter  : 无需认证的路径

@@ -1,0 +1,28 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: hx-auth-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.189.69.32:8849
+  datasource:
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://10.189.66.18:3309/eladmin?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  mapper-locations:
+    - classpath:mybatis/*.xml
+    - classpath*:mybatis/**/mapper/*.xml
+
+
+hx:
+  jwt:
+    keyPairName: pmts.jks
+    keyPairAlias: pmts
+    keyPairSecret: 123456
+    keyPairStoreSecret: 123456
